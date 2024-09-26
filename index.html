@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição para Curso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3a12cb;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .container-img{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box-img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="container">
+        <!-- Container do título e das imagens -->
+        <div class="container-img">
+            <img class="box-img" src="./imagens/books.png">
+            <h2>Formulário de Inscrição para Curso</h2>
+            <img class="box-img" src="./imagens/books.png">
+        </div>
+
+    <form action="/enviar-dados" method="post">
+        <!-- Dados Pessoais -->
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+
+        <!-- Contato -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <!-- Endereço -->
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" required>
+            <option value="">Selecione o Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+        <!-- Informações do Curso -->
+        <label for="curso">Curso Desejado:</label>
+        <select id="curso" name="curso" required>
+            <option value="">Selecione o Curso</option>
+            <option value="engenharia">Engenharia</option>
+            <option value="medicina">Medicina</option>
+            <option value="direito">Direito</option>
+            <option value="administração">Administração</option>
+            <option value="informática">Informática</option>
+        </select>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Deixe suas observações (opcional)"></textarea>
+
+        <button type="submit">Enviar Inscrição</button>
+    </form>
+</div>
+
+</body>
+</html>
